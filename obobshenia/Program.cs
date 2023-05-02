@@ -69,6 +69,33 @@ namespace obobshenia
             {
                 Console.WriteLine("Список пуст");
             }
+            
+            massive<string> strMassive = new massive<string>();
+
+            strMassive.Plus("1");
+            strMassive.Plus("2");
+            strMassive.Plus("3");
+
+            foreach (var bup in strMassive.Elements)
+            {
+                Console.WriteLine(bup + "\n");
+            }
+
+            Console.WriteLine(strMassive.Identify(3));
+
+            strMassive.Delete("1");
+            strMassive.Delete("2");
+            strMassive.Delete("3");
+
+            foreach (var bup in strMassive.Elements)
+            {
+                Console.WriteLine(bup);
+            }
+
+            if (strMassive.Elements.Count == 0)
+            {
+                Console.WriteLine("Список пуст");
+            }
         }
     }
 }
